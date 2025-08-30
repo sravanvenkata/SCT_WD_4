@@ -55,5 +55,5 @@ Responsive To Do List web application built with HTML, CSS, and JavaScript.
 - The app adapts to different screen sizes for a smooth experience.
 
 ## screenshot  
-![to do list ss](to do list_ss.png)
+![to do list ss](to_do_list_ss.png)
 **Made by sravan_venkata**
