@@ -211,34 +211,83 @@ li input[type="text"] {
 }
 
 @media (max-width: 700px) {
+    /* --- 1. General Layout Fixes --- */
+
+    /* Makes the Add Task box more compact */
     .addBox {
-        width: 80vw;
-        max-width: 80vw;
-        min-width: 0;
-        padding: 8px 4vw 8px 4vw;
-        margin: 12px auto 0 auto;
-        box-sizing: border-box;
-        min-height: 60px;
+        width: 70vw;
+        padding: 12px; /* Reduced padding */
+        gap: 8px;      /* Reduced gap between inputs */
     }
-  .task {
-    flex-direction: column;
-    width: 140vw;
-    align-items: center;
-    gap: 12px;
-  }
+
+    /* Reduces the size of the input fields inside the Add Task box */
+    .addBox .input-group input {
+        padding: 8px 10px;
+        font-size: 1rem;
+    }
+    
+    /* Reduces the size of the SAVE button */
+    .addBox .modern-save {
+        padding: 10px 0;
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+
+    .task {
+        width: 140vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
     .inco, .co {
-        width: 120vw;
-        max-width: 140vw;
-        min-width: 0;
-        margin: 0 0 16px 0;
-        padding: 10px 2vw 10px 2vw;
-        min-height: 180px;
-        box-sizing: border-box;
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        margin: 0;
+        padding: 15px;
+        /* This is the key change to make the cards taller */
+        min-height: 30vh; 
     }
-  .inco {
-    min-height: 220px; 
-  }
-  .co {
-    min-height: 120px;
-  }
+
+    /* --- 2. Task Item (<li>) Layout Fixes --- */
+    
+    li {
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 8px;
+        padding: 12px;
+    }
+
+    li input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    li span, li p {
+        font-size: 1rem;
+        flex-grow: 1;
+        flex-basis: calc(100% - 95px);
+        line-height: 1.4;
+    }
+
+    .task-meta {
+        flex-basis: 100%;
+        order: 3;
+        text-align: right;
+        font-size: 0.75rem;
+        color: #666;
+    }
+    
+    button#editBtn, button#gh {
+        padding: 5px 12px;
+        font-size: 0.85rem;
+    }
+
+    li input[type="text"] {
+        font-size: 1rem;
+        padding: 6px 10px;
+        width: calc(100% - 90px);
+    }
 }

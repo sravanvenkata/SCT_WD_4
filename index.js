@@ -35,8 +35,10 @@ window.onload = function () {
   let saved = localStorage.getItem("data");
   let saved1 = localStorage.getItem("data1");
 
-  document.getElementsByClassName("inco")[0].innerHTML = '<h3 id="yet">TO DO</h3>' + (saved ? saved : "");
-  document.getElementsByClassName("co")[0].innerHTML = '<h3 id="done">DONE</h3>' + (saved1 ? saved1 : "");
+  // CORRECTED: Added back the "section-title" class to the h3 elements
+  // This ensures your titles are styled correctly when loading from storage.
+  document.getElementsByClassName("inco")[0].innerHTML = '<h3 id="yet" class="section-title">TO DO</h3>' + (saved ? saved : "");
+  document.getElementsByClassName("co")[0].innerHTML = '<h3 id="done" class="section-title">DONE</h3>' + (saved1 ? saved1 : "");
 
   // Re-attach edit_Task handler to all Edit buttons in inco
   var incoDiv = document.getElementsByClassName("inco")[0];
