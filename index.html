@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>PROJECT 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+  <div class="heading"><h2 class="main-title">TO DO LIST</h2><img src="openbook.png" class="book-icon" alt="Open Book"></div>
+    <div class="addBox">
+      <div class="input-group">
+        <input type="text" id="input1" placeholder="Enter your task">
+      </div>
+      <div class="input-group">
+        <input type="date" id="inputDate" placeholder="dd-mm-yyyy">
+        <img src="calender.jpg" alt="calendar" class="input-icon">
+      </div>
+      <div class="input-group">
+        <input type="time" id="inputTime" placeholder="--:--">
+        <img src="time.jpg" alt="time" class="input-icon">
+      </div>
+      <button class="add modern-save" onclick="Task()">SAVE</button>
+    </div>
+    <div class="task">
+      <div class="inco"><h3 id="yet" class="section-title">TO DO</h3></div>
+      <div class="co"><h3 id="done" class="section-title">DONE</h3></div>
+    </div>
+         <script src="index.js"></script>
+  </body>
+  </html>
