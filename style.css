@@ -50,7 +50,6 @@ body{
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(34,193,195,0.12);
 }
-/* Input row for date and time */
 .input-row {
     display: flex;
     gap: 14px;
@@ -65,7 +64,6 @@ body{
     font-weight: 500;
     letter-spacing: 0.5px;
 }
-/* AddBox modern design */
 .addBox {
     display: flex;
     flex-direction: column;
@@ -120,7 +118,6 @@ body{
 .modern-save:hover {
     background: #22C1C3;
 }
-/* Style for task meta info (date/time) */
 .task-meta {
     margin-top: 2px;
     margin-bottom: 2px;
@@ -211,67 +208,54 @@ li input[type="text"] {
 }
 
 @media (max-width: 700px) {
-    /* --- 1. General Layout Fixes --- */
-
-    /* Makes the Add Task box more compact */
+   
     .addBox {
         width: 70vw;
-        padding: 12px; /* Reduced padding */
-        gap: 8px;      /* Reduced gap between inputs */
+        padding: 12px; 
+        gap: 8px;     
     }
 
-    /* Reduces the size of the input fields inside the Add Task box */
     .addBox .input-group input {
         padding: 8px 10px;
         font-size: 1rem;
     }
     
-    /* Reduces the size of the SAVE button */
     .addBox .modern-save {
         padding: 10px 0;
         font-size: 1rem;
         margin-top: 8px;
     }
-
     .task {
         width: 140vw;
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-
     .inco, .co {
         width: 100%;
         min-width: unset;
         max-width: unset;
         margin: 0;
         padding: 15px;
-        /* This is the key change to make the cards taller */
         min-height: 30vh; 
     }
-
-    /* --- 2. Task Item (<li>) Layout Fixes --- */
-    
     li {
         flex-wrap: wrap;
         align-items: center;
         row-gap: 8px;
         padding: 12px;
     }
-
     li input[type="checkbox"] {
         width: 20px;
         height: 20px;
         flex-shrink: 0;
     }
-
     li span, li p {
         font-size: 1rem;
         flex-grow: 1;
         flex-basis: calc(100% - 95px);
         line-height: 1.4;
     }
-
     .task-meta {
         flex-basis: 100%;
         order: 3;
@@ -279,12 +263,10 @@ li input[type="text"] {
         font-size: 0.75rem;
         color: #666;
     }
-    
     button#editBtn, button#gh {
         padding: 5px 12px;
         font-size: 0.85rem;
     }
-
     li input[type="text"] {
         font-size: 1rem;
         padding: 6px 10px;
